@@ -1,18 +1,14 @@
 import PokemonTable from './pokemons';
+import Search from './Search';
 import '/src/css/styles.css'
 
 function Home() {
-try {
-    const search = document.getElementById('search') as HTMLInputElement;
+    let form = document.getElementById('searchForm') as HTMLFormElement;
 
-    console.log(search.value)
-}catch (e) {
-
-}
 
     return (
         <>
-        <input type="text" id="search" className="searchBar" placeholder="Search for Pokemon"/>
+        <Search/>
         <div className="bar">
             <img className="Home" src="/src/images/poke_ball.png" alt="Pokeball"/>  
                          
@@ -24,6 +20,7 @@ try {
         </div>
         <PokemonTable />
         </> 
+        
     );
 }
 
